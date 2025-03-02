@@ -19,9 +19,6 @@ stages:
                   - artifacts/data_transformation/${P}
             params:
                   - model_name
-                  - model_trainer_type
-                  - N_ITER
-                  - scoring
 
       # MODEL_EVALUATION
       model_evaluation:
