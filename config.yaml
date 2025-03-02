@@ -1,13 +1,13 @@
 artifacts_root: artifacts
 data_transformation:
-  preprocessor_path: artifacts/data_transformation/4/preprocessor.pkl
-  root_dir: artifacts/data_transformation/4
+  preprocessor_path: artifacts/data_transformation/3/preprocessor.pkl
+  root_dir: artifacts/data_transformation/3
   train_data_path: artifacts/data_correction/train_data.pkl
-  train_features_path: artifacts/data_transformation/4/train_features.pkl
-  train_target_path: artifacts/data_transformation/4/train_target.pkl
+  train_features_path: artifacts/data_transformation/3/train_features.pkl
+  train_target_path: artifacts/data_transformation/3/train_target.pkl
   val_data_path: artifacts/data_correction/val_data.pkl
-  val_features_path: artifacts/data_transformation/4/val_features.pkl
-  val_target_path: artifacts/data_transformation/4/val_target.pkl
+  val_features_path: artifacts/data_transformation/3/val_features.pkl
+  val_target_path: artifacts/data_transformation/3/val_target.pkl
 model_evaluation:
   model_path: artifacts/model_trainer/ELA_33/best_model.pkl
   preprocessor_path: artifacts/33/preprocessor.pkl
@@ -19,7 +19,7 @@ model_trainer:
   list_monitor_components_path: artifacts/monitor_desc/list_monitor_components.pkl
   monitor_desc_folder_path: artifacts/monitor_desc
   root_dir: artifacts/model_trainer/ELA_1
-  train_feature_path: artifacts/data_transformation/4/train_features.pkl
-  train_target_path: artifacts/data_transformation/4/train_target.pkl
-  val_feature_path: artifacts/data_transformation/4/val_features.pkl
-  val_target_path: artifacts/data_transformation/4/val_target.pkl
+  train_feature_path: artifacts/data_transformation/3/train_features.pkl
+  train_target_path: artifacts/data_transformation/3/train_target.pkl
+  val_feature_path: artifacts/data_transformation/3/val_features.pkl
+  val_target_path: artifacts/data_transformation/3/val_target.pkl
