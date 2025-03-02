@@ -3,10 +3,10 @@ target_col: Price # Cột mục tiêu
 scoring: neg_mean_squared_error # chỉ tiêu đánh giá
 
 # DATA TRANSFORMATION
-data_transformation: "33" # id của data_transformation
+data_transformation: "1" # id của data_transformation
 
 # MODEL TRAINING
-model_name: ELA_33
+model_name: ELA_1
 param_grid_model_desc:
       alpha: 20-30-1
       l1_ratio: 0.2-0.4
