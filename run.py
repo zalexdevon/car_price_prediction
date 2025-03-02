@@ -36,4 +36,5 @@ if os.path.exists(file_path):
 os.system("git add .")
 os.system('git commit -m "c"')
 os.system("git push")
+os.system("dvc push")
 
