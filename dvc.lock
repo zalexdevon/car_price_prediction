@@ -1,0 +1,92 @@
+schema: '2.0'
+stages:
+  data_transformation:
+    cmd: python src/regressor/pipeline/stage_03_data_transformation.py
+    deps:
+    - path: artifacts/data_correction/train_data.pkl
+      hash: md5
+      md5: 8a1c453fa30cbb3af62cd999cd6d8686
+      size: 488288
+    - path: artifacts/data_correction/val_data.pkl
+      hash: md5
+      md5: 661bea56123d33c01b997e1fcae81df8
+      size: 56252
+    - path: src/regressor/pipeline/stage_03_data_transformation.py
+      hash: md5
+      md5: 8ab2f9fff9006c933ac61f2a272838ae
+      size: 1142
+    params:
+      params.yaml:
+        data_transformation: '33'
+    outs:
+    - path: artifacts/data_transformation_33
+      hash: md5
+      md5: a7e52b098a908ca7b17bf374dc926d75.dir
+      size: 3537041
+      nfiles: 5
+  model_trainer_randomised_train_val:
+    cmd: python src/classifier/pipeline/stage_04_model_training_randomised_train_val.py
+    deps:
+    - path: artifacts/data_transformation_0
+      hash: md5
+      md5: 72c531ad5fdbb0f3b9f58461f1cc6169.dir
+      size: 13914677
+      nfiles: 6
+    - path: src/classifier/pipeline/stage_04_model_training_randomised_train_val.py
+      hash: md5
+      md5: 47a3dba3a815ea44c1525acf8babcb9c
+      size: 1270
+    params:
+      params.yaml:
+        Randomised_search_train_val:
+          N_ITER: 10
+        model_name: XGB_6
+  model_trainer_grid_train_val:
+    cmd: python src/classifier/pipeline/stage_04_model_training_grid_train_val.py
+    deps:
+    - path: artifacts/data_transform_4
+      hash: md5
+      md5: 3462e1a040bc1392fa6ed5b159a12cfb.dir
+      size: 11778764
+      nfiles: 6
+    - path: src/classifier/pipeline/stage_04_model_training_grid_train_val.py
+      hash: md5
+      md5: 9ed280879488992609fd5c323c71d4f0
+      size: 960
+    params:
+      params.yaml:
+        LogisticRegression_1:
+          C: 0.1-0.5-0.1
+  model_trainer:
+    cmd: python src/regressor/pipeline/stage_04_model_training.py
+    deps:
+    - path: artifacts/data_transformation_33
+      hash: md5
+      md5: a7e52b098a908ca7b17bf374dc926d75.dir
+      size: 3537041
+      nfiles: 5
+    - path: src/regressor/pipeline/stage_04_model_training.py
+      hash: md5
+      md5: 844430ec3a43e3bc07428c898549d5dd
+      size: 1839
+    params:
+      params.yaml:
+        N_ITER: 5
+        model_name: ELA_33
+        model_trainer_type: r
+        scoring: neg_mean_squared_error
+  model_evaluation:
+    cmd: python src/regressor/pipeline/stage_05_model_evaluation.py
+    deps:
+    - path: artifacts/data_correction/test_data.pkl
+      hash: md5
+      md5: 2f9c62aec6d9d1dddd9814689f95f37e
+      size: 54252
+    - path: src/regressor/pipeline/stage_05_model_evaluation.py
+      hash: md5
+      md5: fccd01846d5697a0e07ccd11aad57d0f
+      size: 838
+    params:
+      params.yaml:
+        evaluated_data_transformation: '33'
+        evaluated_model_name: ELA_33
