@@ -17,11 +17,11 @@ stages:
       size: 1108
     params:
       params.yaml:
-        data_transformation: '1'
+        data_transformation: '3'
     outs:
-    - path: artifacts/data_transformation/1
+    - path: artifacts/data_transformation/3
       hash: md5
-      md5: 2f1ad817d21558b7c9eea642cdc67d99.dir
+      md5: 925835ed2e4c8f15cf0a2721ddfdd205.dir
       size: 3537031
       nfiles: 5
   model_trainer_randomised_train_val:
