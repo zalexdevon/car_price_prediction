@@ -21,7 +21,6 @@ from lightgbm import LGBMClassifier
 from sklearn.model_selection import ParameterSampler
 from sklearn import metrics
 from sklearn.base import clone
-from regressor.utils import common
 import time
 
 
@@ -129,10 +128,10 @@ class ModelTrainer:
             )
         )
 
-        self.base_model = common.get_base_model(self.config.model_name)
+        self.base_model = myfuncs.get_base_model(self.config.model_name)
 
         result = f"P: {self.config.data_transformation}<br>{self.config.model_name}<br>"
-        result += common.get_monitor_desc(self.config.param_grid_model_desc)
+        result += myfuncs.get_monitor_desc(self.config.param_grid_model_desc)
         self.monitor_desc = result
 
     def save_list_monitor_components(self):

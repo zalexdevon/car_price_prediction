@@ -6,7 +6,6 @@ from regressor.Mylib import myfuncs
 from sklearn import metrics
 import numpy as np
 
-TARGET_COL = "price_range"
 
 
 class ModelEvaluation:

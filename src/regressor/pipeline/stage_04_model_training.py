@@ -6,8 +6,6 @@ from regressor.components.monitor_plotter import (
     MonitorPlotter,
 )
 from regressor import logger
-from regressor.utils import common
-from regressor.Mylib import myfuncs
 
 STAGE_NAME = "Model Trainer stage"
 
