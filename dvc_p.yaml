@@ -2,7 +2,7 @@ stages:
       data_transformation:
             cmd: python src/regressor/pipeline/stage_03_data_transformation.py
             deps:
-                  - artifacts/data_correction
+                  - data_correction
             params:
                   - data_transformation
 
