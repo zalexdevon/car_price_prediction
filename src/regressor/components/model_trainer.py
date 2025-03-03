@@ -151,7 +151,6 @@ class ModelTrainer:
             # d
 
         else:
-
             self.list_monitor_components = []
 
         self.list_monitor_components += [
@@ -161,6 +160,7 @@ class ModelTrainer:
                 self.best_val_score,
             )
         ]
+
         myfuncs.save_python_object(
             self.config.list_monitor_components_path, self.list_monitor_components
         )

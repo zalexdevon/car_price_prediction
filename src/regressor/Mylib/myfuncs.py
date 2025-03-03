@@ -340,6 +340,7 @@ def save_python_object(file_path, obj):
 
         with open(file_path, "wb") as file_obj:
             pickle.dump(obj, file_obj)
+
     except Exception as e:
         raise e
 
@@ -468,7 +469,6 @@ def get_features_target_spliter_for_CV_train_train(train_features, train_target)
     )
 
     return features, target, spliter
-
 
 
 BASE_MODELS = {
