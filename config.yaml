@@ -15,9 +15,9 @@ model_evaluation:
   root_dir: artifacts/model_evaluation
   test_data_path: data_correction/test_data.pkl
 model_trainer:
-  best_model_path: artifacts/model_trainer/ELA_51/best_model.pkl
+  best_model_path: artifacts/model_trainer/ELA_52/best_model.pkl
   list_monitor_components_path: artifacts/list_monitor_components.pkl
-  root_dir: artifacts/model_trainer/ELA_51
+  root_dir: artifacts/model_trainer/ELA_52
   train_feature_path: artifacts/data_transformation/3/train_features.pkl
   train_target_path: artifacts/data_transformation/3/train_target.pkl
   val_feature_path: artifacts/data_transformation/3/val_features.pkl

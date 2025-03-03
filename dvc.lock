@@ -60,7 +60,7 @@ stages:
       nfiles: 5
     params:
       params.yaml:
-        model_name: ELA_51
+        model_name: ELA_52
   model_evaluation:
     cmd: python src/regressor/pipeline/stage_05_model_evaluation.py
     deps:
