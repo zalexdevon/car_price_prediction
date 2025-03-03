@@ -135,16 +135,22 @@ class ModelTrainer:
         self.monitor_desc = result
 
     def save_list_monitor_components(self):
-        if os.path.exists(self.config.list_monitor_components_path):
+        with open("artifacts/run_count.txt", "r") as file:
+            run_count = int(file.read())
+        with open("artifacts/run_count.txt", "w") as file:
+            file.write(str(run_count + 1))
+
+        if run_count > 0:
 
             self.list_monitor_components = myfuncs.load_python_object(
                 self.config.list_monitor_components_path
             )
 
-        else:
             # debug
-            print("list_monitor_components ko ton tai !!!!")
+            print("list_monitor_components da ton tai !!!!")
             # d
+
+        else:
 
             self.list_monitor_components = []
 
