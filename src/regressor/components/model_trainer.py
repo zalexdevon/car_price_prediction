@@ -141,10 +141,11 @@ class ModelTrainer:
                 self.config.list_monitor_components_path
             )
 
+        else:
             # debug
             print("list_monitor_components ko ton tai !!!!")
             # d
-        else:
+
             self.list_monitor_components = []
 
         self.list_monitor_components += [
