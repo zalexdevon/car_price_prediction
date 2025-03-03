@@ -19,6 +19,7 @@ evaluated_model_name: ELA_33
 
 # MONITOR PLOT
 monitor_plotter:
+      monitor_plot_html_path: "artifacts/monitor_plot.html"
       target_val_value: 50
       max_val_value: 1000
       height_for_annot: 200

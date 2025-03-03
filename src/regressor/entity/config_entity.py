@@ -23,7 +23,6 @@ class ModelTrainerConfig:
     val_target_path: Path
     root_dir: Path
     best_model_path: Path
-    monitor_desc_folder_path: Path
     list_monitor_components_path: Path
 
     N_ITER: int
@@ -50,6 +49,7 @@ class ModelEvaluationConfig:
 
 @dataclass(frozen=True)
 class MonitorPlotterConfig:
+    monitor_plot_html_path: Path
     target_val_value: float
     max_val_value: float
     height_for_annot: float

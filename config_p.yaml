@@ -20,8 +20,7 @@ model_trainer:
 
       root_dir: artifacts/model_trainer/${T}
       best_model_path: artifacts/model_trainer/${T}/best_model.pkl
-      monitor_desc_folder_path: artifacts/monitor_desc
-      list_monitor_components_path: artifacts/monitor_desc/list_monitor_components.pkl
+      list_monitor_components_path: artifacts/list_monitor_components.pkl
 
 model_evaluation:
       test_data_path: data_correction/test_data.pkl
