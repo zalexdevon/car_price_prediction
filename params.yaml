@@ -6,7 +6,7 @@ scoring: neg_mean_squared_error # chỉ tiêu đánh giá
 data_transformation: "3" # id của data_transformation
 
 # MODEL TRAINING
-model_name: ELA_51
+model_name: ELA_52
 param_grid_model_desc:
       alpha: 0.2-0.7-0.1
       l1_ratio: 0.2-0.4
