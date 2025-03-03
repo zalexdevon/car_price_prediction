@@ -100,5 +100,5 @@ class MonitorPlotter:
             showlegend=False,
         )
 
-        html_path = "monitor_plot.html"
+        html_path = "artifacts/monitor_desc/monitor_plot.html"
         fig.write_html(html_path, config={"displayModeBar": False})
