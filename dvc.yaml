@@ -2,25 +2,19 @@ stages:
   data_transformation:
     cmd: python src/regressor/pipeline/stage_03_data_transformation.py
     deps:
-    - src/regressor/pipeline/stage_03_data_transformation.py
-    - artifacts/data_correction/train_data.pkl
-    - artifacts/data_correction/val_data.pkl
+    - data_correction
     outs:
     - artifacts/data_transformation/3
     params:
     - data_transformation
   model_evaluation:
     cmd: python src/regressor/pipeline/stage_05_model_evaluation.py
-    deps:
-    - src/regressor/pipeline/stage_05_model_evaluation.py
-    - artifacts/data_correction/test_data.pkl
     params:
     - evaluated_data_transformation
     - evaluated_model_name
   model_trainer:
     cmd: python src/regressor/pipeline/stage_04_model_training.py
     deps:
-    - src/regressor/pipeline/stage_04_model_training.py
     - artifacts/data_transformation/3
     params:
     - model_name
