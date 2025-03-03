@@ -27,13 +27,7 @@ sub_param_for_yaml_file("dvc_p.yaml", "dvc.yaml", replace_dict)
 stage_name = sys.argv[1]
 os.system(f"dvc repro {stage_name}")
 
-# # Xóa file .ignore nếu có
-# file_path = "artifacts/data_transformation/.gitignore"
-# if os.path.exists(file_path):
-#     os.remove(file_path)
-
-# # Chạy xong trên colab push lên git ngay
-# os.system("git add .")
-# os.system('git commit -m "c"')
-# os.system("git push")
-# os.system("dvc push")
+# Chạy xong trên colab push lên git ngay
+os.system("git add .")
+os.system('git commit -m "c"')
+os.system("git push")
