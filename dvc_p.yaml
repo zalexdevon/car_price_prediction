@@ -15,14 +15,9 @@ stages:
                   - artifacts/data_transformation/${P}
             params:
                   - model_name
-            outs:
-                  - artifacts/model_trainer/${T}
-                  - artifacts/monitor_desc
 
       model_evaluation:
             cmd: python src/regressor/pipeline/stage_05_model_evaluation.py
             params:
                   - evaluated_data_transformation
                   - evaluated_model_name
-            outs:
-                  - artifacts/model_evaluation/${E}
