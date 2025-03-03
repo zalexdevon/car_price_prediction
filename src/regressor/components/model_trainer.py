@@ -140,6 +140,10 @@ class ModelTrainer:
             self.list_monitor_components = myfuncs.load_python_object(
                 self.config.list_monitor_components_path
             )
+
+            # debug
+            print("list_monitor_components ko ton tai !!!!")
+            # d
         else:
             self.list_monitor_components = []
 
